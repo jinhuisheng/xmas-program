@@ -1,7 +1,5 @@
 package xmas;
 
-import java.util.HashMap;
-
 public class Constants {
     public static final String[] DAY_PRODUCT_COUNTS = {
             "A", "Two", "Three", "Four",
