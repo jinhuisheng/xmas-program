@@ -3,7 +3,7 @@ package xmas;
 import java.util.HashMap;
 
 public class IndexToNumbers {
-    private final static HashMap<Integer, String> INDEX_TO_NUMBERS = new HashMap<>();
+    private static final HashMap<Integer, String> INDEX_TO_NUMBERS = new HashMap<>();
 
     static {
         INDEX_TO_NUMBERS.put(0, "first");

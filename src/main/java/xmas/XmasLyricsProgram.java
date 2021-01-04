@@ -7,7 +7,7 @@ import java.util.stream.IntStream;
 public class XmasLyricsProgram {
     private List<String> dayWords;
 
-    public XmasLyricsProgram(List<String> dayWords) {
+    private XmasLyricsProgram(List<String> dayWords) {
         this.dayWords = dayWords;
     }
 
@@ -24,6 +24,10 @@ public class XmasLyricsProgram {
 
     private String dayLyric(int index) {
         return firstLine(index) + lyricContent(index) + lastString();
+    }
+
+    private String firstLine(int index) {
+        return "On the " + IndexToNumbers.convert(index) + " day of Christmas\n" + "My true love gave to me:\n";
     }
 
     private String lastString() {
@@ -49,13 +53,6 @@ public class XmasLyricsProgram {
             return " and\n";
         }
         return "\n";
-    }
-
-    private String firstLine(int index) {
-        return "On the " +
-                IndexToNumbers.convert(index) +
-                " day of Christmas\n" +
-                "My true love gave to me:\n";
     }
 
 }
