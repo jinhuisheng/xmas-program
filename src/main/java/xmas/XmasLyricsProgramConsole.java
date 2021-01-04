@@ -1,8 +1,11 @@
 package xmas;
 
-public class XmasLyricGame {
+import java.util.Arrays;
+
+public class XmasLyricsProgramConsole {
     public static void main(String[] args) {
-        XmasLyric xmasLyric = new XmasLyric(
+
+        System.out.println(XmasLyricsProgram.generate(Arrays.asList(
                 "partridge",
                 "turtle doves",
                 "french hens",
@@ -15,8 +18,6 @@ public class XmasLyricGame {
                 "lords a-leaping",
                 "pipers piping",
                 "drummers drumming"
-        );
-
-        System.out.println(xmasLyric.generate());
+        )));
     }
 }
