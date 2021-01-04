@@ -5,10 +5,10 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class XmasLyricsProgram {
-    private List<String> dayWords;
+    private List<String> dayProducts;
 
-    private XmasLyricsProgram(List<String> dayWords) {
-        this.dayWords = dayWords;
+    private XmasLyricsProgram(List<String> dayProducts) {
+        this.dayProducts = dayProducts;
     }
 
     public static String generate(List<String> dayWords) {
@@ -17,21 +17,17 @@ public class XmasLyricsProgram {
     }
 
     private String generate() {
-        return IntStream.range(0, dayWords.size()).boxed()
+        return IntStream.range(0, dayProducts.size()).boxed()
                 .map(this::dayLyric)
                 .collect(Collectors.joining("\n"));
     }
 
     private String dayLyric(int index) {
-        return firstLine(index) + lyricContent(index) + lastString();
+        return firstLine(index) + lyricContent(index) + Constants.LAST_STRING;
     }
 
     private String firstLine(int index) {
-        return "On the " + IndexToNumbers.convert(index) + " day of Christmas\n" + "My true love gave to me:\n";
-    }
-
-    private String lastString() {
-        return " in a pear tree.\n";
+        return "On the " + Constants.INDEX_TO_NUMBERS[index] + " day of Christmas\n" + "My true love gave to me:\n";
     }
 
     private String lyricContent(int index) {
@@ -42,7 +38,7 @@ public class XmasLyricsProgram {
     }
 
     private String lyricContentLineLyric(int index) {
-        return DayProductCounts.convert(index) + " " + dayWords.get(index) + getContentLineLastString(index);
+        return Constants.DAY_PRODUCT_COUNTS[index] + " " + dayProducts.get(index) + getContentLineLastString(index);
     }
 
     private String getContentLineLastString(int index) {
