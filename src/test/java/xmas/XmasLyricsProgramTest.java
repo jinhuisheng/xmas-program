@@ -16,7 +16,7 @@ public class XmasLyricsProgramTest {
     }
 
     @Test
-    void should_generate_two_days_lyrics() {
+    void should_generate_two_day_lyrics() {
         assertThat(XmasLyricsProgram.generate(Arrays.asList("partridge", "turtle doves")))
                 .isEqualTo("On the first day of Christmas\n" +
                         "My true love gave to me:\n" +
@@ -29,7 +29,7 @@ public class XmasLyricsProgramTest {
     }
 
     @Test
-    void should_generate_three_days_lyrics() {
+    void should_generate_three_day_lyrics() {
         assertThat(XmasLyricsProgram.generate(Arrays.asList("partridge", "turtle doves", "french hens")))
                 .isEqualTo("On the first day of Christmas\n" +
                         "My true love gave to me:\n" +
@@ -48,8 +48,8 @@ public class XmasLyricsProgramTest {
     }
 
     @Test
-    void should_generate_four_days_lyrics() {
-        assertThat(XmasLyricsProgram.generate(Arrays.asList("partridge", "turtle doves", "french hens","calling birds")))
+    void should_generate_four_day_lyrics() {
+        assertThat(XmasLyricsProgram.generate(Arrays.asList("partridge", "turtle doves", "french hens", "calling birds")))
                 .isEqualTo("On the first day of Christmas\n" +
                         "My true love gave to me:\n" +
                         "A partridge in a pear tree.\n" +
