@@ -32,10 +32,9 @@ public class XmasLyricsProgram {
     }
 
     private String firstLine(int index) {
-        return "On the " +
-                DAY_INDEX_NUMBER_STRINGS[index] +
-                " day of Christmas\n" +
-                "My true love gave to me:\n";
+        return "On the " + DAY_INDEX_NUMBER_STRINGS[index]
+                + " day of Christmas\n"
+                + "My true love gave to me:\n";
     }
 
     private String lyricProductContent(int index) {
